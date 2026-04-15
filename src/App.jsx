@@ -50,17 +50,17 @@ function App() {
       text,
       checked: false,
     };
-    dispatch({ type: 'INSRET'.todo });
+    dispatch({ type: 'INSRET', todo });
     //nextId.current= nextId.current +1
     nextId.current += 1; //nextId 1씩 더하기
   }, []);
 
   const onRemove = useCallback((id) => {
-    dispatch({ type: 'REMOVE'.id });
+    dispatch({ type: 'REMOVE', id });
   }, []);
 
   const onToggle = useCallback((id) => {
-    dispatch({ type: 'TOGGLE'.todo });
+    dispatch({ type: 'TOGGLE', id });
   }, []);
 
   return (
